@@ -11,13 +11,13 @@
       </p>
       <p v-if="id">Et pense à noter le code <span class="id-code">{{{ id }}}</span> quelque part ;)</p>
       <h1>Ton plan est un peu pourri ?</h1>
-      <p>
-        Pas grave, envoie quand même un snap et partage ce site histoire d’avoir quand même une chance d'être invité à l'apéro.
+      <p>Pas grave, envoie quand même un snap.<br />
+        Et si tu avoir un peu plus de chance d'être invité <span class="tooltip">à l'apéro<span class="tooltip-content">et tu devrais parce qu'il va être hyper bien cet apéro !</span></span>, il te suffit de créer ton lien de partage.
       </p>
     </div>
     <div v-else>
       <h1 v-else>Pas grave</h1>
-      <p>Tu peux tout de même partager cette page, si une personne à qui tu partages me trouve un appart, tu seras invité à l'apéro.</p>
+      <p>Tu peux tout de même avoir une chance d'être invité <span class="tooltip">à l'apéro<span class="tooltip-content">et tu devrais parce qu'il va être hyper bien cet apéro !</span></span>. Pour cela, il te suffit de créer ton lien de partage.</p>
     </div>
     <p>Pour obtenir ton lien de partage clique sur le bouton <span class="id-code">YEAH !</span> ci-dessous et rempli le formulaire.</p>
     <div class="partage-button">

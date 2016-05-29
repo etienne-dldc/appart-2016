@@ -7,9 +7,11 @@
     <p>
       <span v-if="yep">Ton plan est un peu moisi mais tu veux quand même participer à cet apéro ?</span>
       <span v-else>T’as pas de plan mais tu veux quand même participer à cet apéro ?</span>
-      Pas de problème, file-moi ton prénom et ton snap<span class="partage-info">(pas de panique, ton snap ne sera pas publié <span class="tooltip">ni vendu à Facebook<span class="tooltip-content">... qui l'a probablement déjà.</span></span>)</span>, clique sur le gros bouton (juste là en dessous) et partage le lien qui s'affiche.
+      Pas de problème, file-moi ton prénom et ton snap <span class="partage-info">(pas de panique, ton snap ne sera pas publié <span class="tooltip">ni vendu à Facebook<span class="tooltip-content">... qui l'a probablement déjà.</span></span>)</span>, clique sur le bouton <span class="id-code">APÉRO</span> (juste là en dessous) et partage le lien qui s'affiche.
       <p class="partage-ps">J'ai aussi besoin de savoir si t'es un mec ou une meuf histoire de savoir si je dois mettre "il" ou "elle".<br /><span class="tooltip">Mais bon, tu peux mentir si ça te fait plaisir,<span class="tooltip-content">Hop là, petit alexandrin OKLM</span></span> j'irai pas vérifier...</p>
-      <p>Si je trouve un appart grâce à une des personnes à qui tu as partagé, tu seras invité à l'apéro.</p>
+      <p>
+        Si je trouve un appart grâce à une personne qui a utilisé ton lien, tu seras <span class="tooltip">invité à l'apéro<span class="tooltip-content">C'est d'ailleur pour ça que j'ai besoin d'un moyen pour te contacté.</span></span>. <br />
+      </p>
     </p>
     <p class="partage-error" v-if="error">Oops, ca à foiré :/</p>
     <div class="partage-content">

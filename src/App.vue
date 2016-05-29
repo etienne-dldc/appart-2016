@@ -5,7 +5,7 @@
     </div>
     <div v-else>
       <div :class="getClassesForStep(0)">
-        <home :users="users" :error="getUserError"></home>
+        <home :users="users" :error="getUserError" :id="parentId"></home>
       </div>
       <div :class="getClassesForStep(1)">
         <deal></deal>
