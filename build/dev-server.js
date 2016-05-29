@@ -1,6 +1,7 @@
 var path = require('path')
 var express = require('express')
 var webpack = require('webpack')
+var proxy = require('express-http-proxy')
 var config = require('../config')
 var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = process.env.NODE_ENV === 'testing'
@@ -41,6 +42,12 @@ Object.keys(proxyTable).forEach(function (context) {
   }
   app.use(proxyMiddleware(context, options))
 })
+
+app.use('/api', proxy('http://localhost:3001', {
+  forwardPath: function(req, res) {
+    return '/api' + require('url').parse(req.url).path;
+  }
+}));
 
 // handle fallback for HTML5 history API
 app.use(require('connect-history-api-fallback')())
