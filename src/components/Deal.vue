@@ -19,19 +19,19 @@ export default {
   components: {
     MyButton
   },
-  data: () => {
+  data() {
     return {
       prevIcon
     }
   },
   methods: {
-    nextStep: function () {
+    nextStep() {
       this.$dispatch('next-step')
     },
-    prevStep: function () {
+    prevStep() {
       this.$dispatch('prev-step')
     },
-    yepNope: function (val) {
+    yepNope(val) {
       this.$dispatch('next-step')
       this.$dispatch('yep-nope', val)
     }

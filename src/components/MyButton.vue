@@ -15,15 +15,15 @@ export default {
       default: false
     }
   },
-  data: () => {
+  data() {
     return {
     }
   },
-  ready: function () {
+  ready() {
 
   },
   methods: {
-    onClick: function () {
+    onClick() {
       this.$emit('go')
     }
   }

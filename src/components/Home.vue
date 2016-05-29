@@ -23,7 +23,7 @@ export default {
   },
   props: ['users', 'error', 'id'],
   computed: {
-    invitText: function () {
+    invitText() {
       if (this.users.length == 0) {
         return null
       }
@@ -53,10 +53,10 @@ export default {
     }
   },
   methods: {
-    nextStep: function () {
+    nextStep() {
       this.$dispatch('next-step')
     },
-    prevStep: function () {
+    prevStep() {
       this.$dispatch('prev-step')
     }
   }

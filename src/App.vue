@@ -37,7 +37,7 @@ export default {
     YepNope,
     Partage
   },
-  data: () => {
+  data() {
     return {
       loaded: false,
       step: 0,
@@ -48,7 +48,7 @@ export default {
       getUserError: false
     }
   },
-  ready: function () {
+  ready() {
     let userId = url.parse(window.location.href).pathname;
     userId = userId.replace('/', '')
     if (userId.length > 0) {
@@ -76,17 +76,17 @@ export default {
     }
   },
   methods: {
-    nextStep: function () {
+    nextStep() {
       if (this.step < this.steps.length) {
         this.step = this.step + 1
       }
     },
-    prevStep: function () {
+    prevStep() {
       if (this.step > 0) {
         this.step = this.step - 1
       }
     },
-    getClassesForStep: function (forStep) {
+    getClassesForStep(forStep) {
       if (this.step === forStep) {
         return 'step current'
       } else

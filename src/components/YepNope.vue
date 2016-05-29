@@ -35,16 +35,16 @@ export default {
     MyButton
   },
   props: ['yep', 'id'],
-  data: () => {
+  data () {
     return {
       prevIcon
     }
   },
   methods: {
-    nextStep: function () {
+    nextStep() {
       this.$dispatch('next-step')
     },
-    prevStep: function () {
+    prevStep() {
       this.$dispatch('prev-step')
     }
   }

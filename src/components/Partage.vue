@@ -68,7 +68,7 @@ export default {
     MyButton
   },
   props: ['yep', 'parent-id'],
-  data: () => {
+  data() {
     return {
       prevIcon,
       copyIcon,
@@ -85,7 +85,7 @@ export default {
       copiedTimer: null
     }
   },
-  ready: function () {
+  ready() {
     this.linkClipboard = new Clipboard(this.$els.copyBtn, {
       text: (trigger) => {
         return this.link
@@ -95,19 +95,19 @@ export default {
       this.showCopied()
   });
   },
-  beforeDestroy: function () {
+  beforeDestroy() {
     if (this.linkClipboard) {
       this.linkClipboard.destroy();
     }
   },
   methods: {
-    nextStep: function () {
+    nextStep() {
       this.$dispatch('next-step')
     },
-    prevStep: function () {
+    prevStep() {
       this.$dispatch('prev-step')
     },
-    showCopied: function () {
+    showCopied() {
       if (this.copiedTimer) {
         clearTimeout(this.copiedTimer)
       }
@@ -116,7 +116,7 @@ export default {
         this.copied = false
       }, 1000);
     },
-    validateForm: function () {
+    validateForm() {
       this.formLoad = true
       this.error = false
       postUser({
