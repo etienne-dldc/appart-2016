@@ -6,7 +6,7 @@ var path = require('path');
 
 var db = require('./db');
 
-var dist = path.resolve(__dirname, '/../dist');
+var dist = path.resolve(__dirname, '../dist');
 
 var app = express();
 app.use(bodyParser.json());
@@ -73,7 +73,7 @@ app.post('/api', function (req, res, next) {
 })
 
 app.get('/', function (req, res) {
-  res.sendFile('/../index.html')
+  res.sendFile('/dist/index.html')
 })
 
 app.use(apiFallback('index.html', { root: dist }))
