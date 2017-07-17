@@ -4,7 +4,6 @@ var shortid = require('shortid');
 var apiFallback = require('express-history-api-fallback');
 
 var db = require('./db');
-var secret = require('./secret');
 
 var dist = __dirname + '/../dist'
 
@@ -35,7 +34,7 @@ app.get('/api/from/:userId', function (req, res, next) {
   })
 })
 
-app.get(('/api/all/' + secret), function (req, res, next) {
+app.get(('/api/all/' + process.env.SECRET_ACCESS_ALL), function (req, res, next) {
   db.getAll(function (data) {
     res.json(data)
   })
