@@ -5,7 +5,7 @@
   "author": "Etienne Dldc <etienne.dldc@outlook.fr>",
   "private": true,
   "scripts": {
-    "postinstall": "npm run build",
+    "postinstall": "npm run build && ls -d ./dist/**/**",
     "start": "node ./server",
     "server": "PORT=3000 node ./server",
     "dev": "node build/dev-server.js",
