@@ -2,10 +2,11 @@ var express = require('express');
 var bodyParser = require('body-parser')
 var shortid = require('shortid');
 var apiFallback = require('express-history-api-fallback');
+var path = require('path');
 
 var db = require('./db');
 
-var dist = __dirname + '/../dist'
+var dist = path.resolve(__dirname, '/../dist');
 
 var app = express();
 app.use(bodyParser.json());
@@ -72,7 +73,7 @@ app.post('/api', function (req, res, next) {
 })
 
 app.get('/', function (req, res) {
-  req.send('Hello')
+  req.sendFile(path.resolve(dist, 'index.html'))
 })
 
 app.use(apiFallback('index.html', { root: dist }))
