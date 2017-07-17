@@ -71,6 +71,10 @@ app.post('/api', function (req, res, next) {
   })
 })
 
+app.get('/', function (req, res) {
+  req.send('Hello')
+})
+
 app.use(apiFallback('index.html', { root: dist }))
 
 app.listen(process.env.PORT, function () {
