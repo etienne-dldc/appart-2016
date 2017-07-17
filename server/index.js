@@ -41,6 +41,10 @@ app.get(('/api/all/' + process.env.SECRET_ACCESS_ALL), function (req, res, next)
   })
 })
 
+app.get(('/api/download/' + process.env.SECRET_ACCESS_ALL), function (req, res, next) {
+  res.sendFile('/data.db')
+})
+
 app.post('/api', function (req, res, next) {
   // Verif data
 
