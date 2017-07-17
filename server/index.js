@@ -73,7 +73,7 @@ app.post('/api', function (req, res, next) {
 })
 
 app.get('/', function (req, res) {
-  res.sendFile(path.resolve(dist, 'index.html'))
+  res.sendFile('index.html')
 })
 
 app.use(apiFallback('index.html', { root: dist }))
