@@ -7,6 +7,7 @@
   "scripts": {
     "prestart": "npm run build",
     "start": "node ./server",
+    "server": "PORT=3000 node ./server",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "test": "",

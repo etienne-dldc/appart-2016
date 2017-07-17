@@ -73,6 +73,6 @@ app.post('/api', function (req, res, next) {
 
 app.use(apiFallback('index.html', { root: dist }))
 
-app.listen(3001, function () {
-  console.log('Example app listening on port 3001!');
+app.listen(process.env.PORT, function () {
+  console.log('Example app listening on port ' + process.env.PORT);
 });
