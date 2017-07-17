@@ -2,7 +2,7 @@ var path = require('path')
 var express = require('express')
 var webpack = require('webpack')
 var proxy = require('express-http-proxy')
-var config = require('../config')
+var config = require('./config')
 var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = process.env.NODE_ENV === 'testing'
   ? require('./webpack.prod.conf')
