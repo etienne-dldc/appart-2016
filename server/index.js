@@ -3,6 +3,7 @@ var bodyParser = require('body-parser')
 var shortid = require('shortid');
 var apiFallback = require('express-history-api-fallback');
 var path = require('path');
+var fs = require("fs");
 
 var db = require('./db');
 
@@ -42,7 +43,8 @@ app.get(('/api/all/' + process.env.SECRET_ACCESS_ALL), function (req, res, next)
 })
 
 app.get(('/api/download/' + process.env.SECRET_ACCESS_ALL), function (req, res, next) {
-  res.download('/data.db')
+  console.log(fs.existsSync('data.db'));
+  res.download('data.db');
 })
 
 app.post('/api', function (req, res, next) {
